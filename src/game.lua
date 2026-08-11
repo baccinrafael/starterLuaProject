@@ -23,6 +23,11 @@ local Colors = {
 	shadowGrey = CH(36, 39, 43),
 	darkSpruceGreen = CH(36, 79, 38),
 	porcelain = CH(251, 254, 249),
+	cherryBlossom = CH(237, 175, 184),
+	celadon = CH(179, 222, 193),
+	deepPurple = CH(89, 17, 77),
+	evergreen = CH(0, 59, 54),
+	orange = CH(252, 163, 17),
 }
 
 function game.load()
@@ -45,10 +50,6 @@ end
 
 function game.draw()
 	push:start()
-
-	-- Exemplo: Um retângulo que ocupa exatamente a borda da resolução virtual
-	love.graphics.setColor(1, 0, 0, 1) -- Cor vermelha
-	love.graphics.rectangle("fill", 0, 0, GameData.width, GameData.height)
 
 	push:finish()
 end
