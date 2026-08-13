@@ -2,9 +2,10 @@ local game = {}
 
 local push = require("src.push")
 
+local desktopWidth, desktopHeight = love.window.getDesktopDimensions() -- Use that if your game will use the entire screen (fullscreen)
 local GameData = {
-	width = 500,
-	height = 500,
+	width = desktopWidth,
+	height = desktopHeight,
 	seed = os.time(),
 }
 
@@ -33,15 +34,19 @@ local Colors = {
 function game.load()
 	love.graphics.setDefaultFilter("linear", "linear") -- linear or nearest, nearest for pixel art based games, linear for everything else
 
-	local desktopWidth, desktopHeight = love.window.getDesktopDimensions() -- Use that if your game will use the entire screen (fullscreen)
-
-	--  push:setupScreen(GameData.width, GameData.height, desktopWidth, desktopHeight, { -- If you want full screen uncomment this line and delete the one below \/ and turn fullscreen to true
-	push:setupScreen(GameData.width, GameData.height, GameData.width, GameData.height, {
-		fullscreen = false,
-		resizable = false,
-		vsync = true,
-		canvas = true, -- should always be true
-	})
+	push:setupScreen(
+		GameData.width,
+		GameData.height,
+		desktopWidth,
+		desktopHeight,
+		{ -- If you dont want full screen comment this line and uncomment the one below \/ and turn fullscreen to false
+			-- push:setupScreen(GameData.width, GameData.height, GameData.width, GameData.height, {
+			fullscreen = true,
+			resizable = false,
+			vsync = true,
+			canvas = true, -- should always be true
+		}
+	)
 
 	love.window.setMode(GameData.width, GameData.height)
 
