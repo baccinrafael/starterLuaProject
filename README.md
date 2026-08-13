@@ -14,7 +14,7 @@ so many times its crazy...
 * OOP-style foundation, uses Lua tables and metatables for reusable modules
 * Custom color palette, predefined RGB constants for consistent visuals
 * Seeded RNG, random generator initialized using system time
-* Virtual resolution, configurable resolution independent of screen size
+* Virtual resolution, configurable resolution independent of screen size using https://github.com/Ulydev/push
 * Automatic scaling, handles resizing, offsets, and different displays
 * Canvas rendering, consistent rendering using virtual resolution
 * Coordinate conversion,  utilities for game-space and screen-space mapping
