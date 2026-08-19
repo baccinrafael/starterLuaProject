@@ -5,10 +5,10 @@ local dw, dh = love.window.getDesktopDimensions() -- Use that if your game will 
 gameData = {
 	desktopWidth = dw,
 	desktopHeight = dh,
-	windowWidth = 800,
-	windowHeight = 600,
-	gameWidth = 800,
-	gameHeight = 600,
+	windowWidth = dw * 0.5,
+	windowHeight = dh * 0.5,
+	gameWidth = dw * 0.5,
+	gameHeight = dh * 0.5,
 	seed = os.time(),
 }
 
@@ -26,7 +26,10 @@ function gameData:setup()
 
 	RNG = love.math.newRandomGenerator(gameData.seed)
 
-	love.window.setMode(gameData.windowWidth, gameData.windowHeight, { borderless = true })
+	love.window.setMode(gameData.windowWidth, gameData.windowHeight, {
+		borderless = false,
+		fullscreen = false,
+	})
 end
 
 return gameData

@@ -11,11 +11,15 @@ local Colors = {
 		pearlAqua = CH(175, 224, 206),
 		celadon = CH(179, 222, 193),
 		cherryBlossom = CH(237, 175, 184),
+		canaryYellow = CH(252, 252, 98),
+		periwinkle = CH(142, 148, 242),
+		emerald = CH(112, 183, 126),
 	},
 
 	medium = {
 		orange = CH(252, 163, 17),
 		amaranth = CH(218, 62, 82),
+		inferno = CH(164, 6, 6),
 	},
 	dark = {
 		darkSpruceGreen = CH(36, 79, 38),
